@@ -1,2 +1,38 @@
-//THIS IS MY PROJECT 1
+//project 1 draft
 
+
+let x = 100;
+let y = 150;
+	// color palette
+var colors = ["#8C0303", "#260F01", "#A64F03", "#402403", "#F2B544"];
+// setting weights for each color 
+var weights = [1, 2, 2, 1, 1, 0];
+
+//EYES
+function eyez1(){
+	fill("#F2B544");
+	ellipseMode(CENTER);
+ellipse(x,y,50,15);
+	ellipse(x+85,y,50,15);
+	fill("#8C0303");
+	ellipse(x,y,20,15);
+	ellipse(x+85,y,20,15);
+	//inner pupils
+	fill(0);
+	ellipse(x,y,5,14);
+	ellipse(x+85,y,5,14);
+	rotate(2);
+}
+function setup() {
+	createCanvas(windowWidth,windowHeight);
+
+	background(0);
+}
+
+function draw() {
+	eyez1();
+	for (i=0; i<=15;i++) {
+		fill(255);
+		ellipse(x,y, 50, i);
+	}
+}
